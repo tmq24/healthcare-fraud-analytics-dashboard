@@ -29,5 +29,5 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Results (too large)
+# Results
 segmentation_results.csv
