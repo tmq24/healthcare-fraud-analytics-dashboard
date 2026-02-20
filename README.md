@@ -25,47 +25,25 @@ A comprehensive Medicare Part D fraud and waste analysis project using AI to det
 
 ## Dashboard Overview
 
-The `Final.pbix` file contains a comprehensive Power BI dashboard with 6 pages:
+The `Final.pbix` file contains a comprehensive Power BI dashboard with 7 pages:
 
 ### 1. Executive Overview
-- Total Cost (3 Years): $369,187,519,900
-- Total Claims: 3,647,086,261
-- Total Prescribers: 1,163,372
-- Financial and geographical insights with state-level cost distribution
+![Overview Dashboard](figure/overview_dashboard.png)
 
 ### 2. Executive Overview: Financial & Geographical Insights
-- Geographic cost distribution map (choropleth)
-- Spending & price trends over 2018-2020
-- Special group spending analysis (Top 5 specialties)
-- Cost root cause analysis (hierarchical breakdown)
+![Executive Overview](figure/executive_overview.png)
 
 ### 3. Cost & Brand Waste: Efficiency Analysis
-- Brand Cost: $304,578,362,798 (82.5%)
-- Brand Prescribing Rate: 18%
-- Top 30 high-cost drugs analysis (scatter plot)
-- Brand vs. Generic cost comparison
-- Detailed drug cost analysis by specialty
+![Cost & Brand Waste](figure/cost_brand_waste.png)
 
 ### 4. Public Health Risk Monitor: Opioid & Antibiotic Safety
-- Antibiotic Use Rate: 2.48% (Max threshold: 30%)
-- Opioid Risk Rate: 4.63% (Max threshold: 20%)
-- Average Claims Per Patient: 4 (Max threshold: 40)
-- Opioid risk intensity by state (choropleth map)
-- Top high-risk prescribers (100% opioid rate)
-- Opioid risk evolution by specialty (2018-2020)
+![Public Health Risks](figure/public_health_risks.png)
 
 ### 5. Elderly Safety Monitor
-- High Fall Risk Claims: 52.28M
-- Elderly Risk Score: 2.1% (Goal: 0.10)
-- Antipsychotic Claims (>65yo): 10.02M
-- Total Elderly Beneficiaries: 966.23K
-- Risky drug mix for elderly (donut chart)
-- Risk prescription by specialty (stacked bar chart)
-- Detailed prescriber-level risk analysis table
+![Elderly Safety](figure/elderly_safety.png)
 
 ### 6. AI & Segmentation: Advanced Anomaly Detection
-- High Risk Count: 4,498
-- Anomalies Detected: 708
+![AI Segmentation](figure/ai_segmentation.png)
 - Cluster distribution by risk (scatter plot)
   - X-axis: Average Cost per Claim ($) - Log scale
   - Y-axis: Anomaly Score - 0 to 100
@@ -74,13 +52,7 @@ The `Final.pbix` file contains a comprehensive Power BI dashboard with 6 pages:
 - Top risk anomalies table with detailed prescriber information
 
 ### 7. Provider Search & Profile: Digital Dossier
-- Individual prescriber search and analysis
-- Provider identity and credentials
-- Cost efficiency audit (Provider vs. Peers)
-- Opioid safety audit (Provider vs. Peers)
-- Prescription intensity audit
-- Top 10 costly drugs prescribed
-- Risk portfolio mix (donut chart)
+![Provider Profile](figure/provider_profile.png)
 
 ## License
 This project is for educational and research purposes.
