@@ -1,53 +1,58 @@
 # Healthcare Fraud Analytics Dashboard
 
-## Mô tả
-Dự án phân tích gian lận và lãng phí trong Medicare Part D sử dụng AI để phát hiện các prescriber có rủi ro cao thông qua clustering và anomaly detection.
+## Description
+A comprehensive Medicare Part D fraud and waste analysis project using AI to detect high-risk prescribers through clustering and anomaly detection techniques.
 
-## Công nghệ sử dụng
-- **Python**: Xử lý dữ liệu và AI models
-- **Power BI**: Visualization dashboard
+## Technologies Used
+- **Python**: Data processing and AI models
+- **Power BI**: Interactive visualization dashboard
 - **Machine Learning**: 
-  - K-Means Clustering (4 clusters)
-  - Isolation Forest (Anomaly Detection)
+  - K-Means Clustering
+  - Isolation Forest
 
-## Cấu trúc dự án
-```
-NhomE/
-├── code.py                    # Script chính: AI segmentation & anomaly detection
-├── archive/                   # Dữ liệu gốc (parquet files)
-├── figure/                    # Hình ảnh và icons cho dashboard
-├── Measures_KPI.xlsx         # Định nghĩa các KPI measures
-├── Data_Columns.xlsx         # Định nghĩa các cột dữ liệu
-└── segmentation_results.csv  # Kết quả phân tích (không commit do kích thước lớn)
-```
-
-## Quy trình xử lý
-1. **Load & Aggregate**: Tổng hợp dữ liệu từ 3 năm (2018-2020) theo Prescriber NPI
-2. **Feature Engineering**: Tính 5 đặc trưng phản ánh hành vi kê đơn
+## Processing Pipeline
+1. **Load & Aggregate**: Aggregate data from 3 years (2018-2020) by Prescriber NPI
+2. **Feature Engineering**: Calculate 5 features reflecting prescribing behavior
 3. **AI Models**: 
-   - K-Means clustering (4 nhóm)
-   - Isolation Forest (phát hiện anomalies)
-4. **Risk Scoring**: Tính điểm rủi ro tổng hợp
+   - K-Means clustering (4 groups)
+   - Isolation Forest (anomaly detection)
+4. **Risk Scoring**: Calculate composite risk score
 
-## Kết quả
+## Key Results
 - **Total Prescribers**: 1,163,372
 - **High Risk Count**: 4,498 (0.4%)
-- **Red Zone Prescribers**: 3,712 (0.32%) - chiếm 4.36% tổng chi phí
+- **Red Zone Prescribers**: 3,712 (0.32%) - accounting for 4.36% of total cost
 
-## Yêu cầu
-- Python 3.7+
-- pandas, numpy, scikit-learn
+## Dashboard Overview
 
-## Chạy script
-```bash
-python code.py
-```
+The `Final.pbix` file contains a comprehensive Power BI dashboard with 6 pages:
 
-## Dashboard
-File `Final.pbix` chứa Power BI dashboard với 6 pages:
-1. Overview
-2. Geographic Analysis
-3. Drug Analysis
-4. Prescriber Analysis
-5. AI & Segmentation (Page này)
-6. Provider Profile
+### 1. Executive Overview
+![Overview Dashboard](figure/overview_dashboard.png)
+
+### 2. Executive Overview: Financial & Geographical Insights
+![Executive Overview](figure/executive_overview.png)
+
+### 3. Cost & Brand Waste: Efficiency Analysis
+![Cost & Brand Waste](figure/cost_brand_waste.png)
+
+### 4. Public Health Risk Monitor: Opioid & Antibiotic Safety
+![Public Health Risks](figure/public_health_risks.png)
+
+### 5. Elderly Safety Monitor
+![Elderly Safety](figure/elderly_safety.png)
+
+### 6. AI & Segmentation: Advanced Anomaly Detection
+![AI Segmentation](figure/ai_segmentation.png)
+- Cluster distribution by risk (scatter plot)
+  - X-axis: Average Cost per Claim ($) - Log scale
+  - Y-axis: Anomaly Score - 0 to 100
+  - 4 clusters: Low Cost/Low Risk, Moderate/Stable, Behavioral Anomaly, High Cost/High Risk
+- Cluster characteristics (radar chart)
+- Top risk anomalies table with detailed prescriber information
+
+### 7. Provider Search & Profile: Digital Dossier
+![Provider Profile](figure/provider_profile.png)
+
+## License
+This project is for educational and research purposes.
